@@ -1,48 +1,23 @@
-<!DOCTYPE html>
-<html>
+---
+layout: default
+---
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Home Page of Site : ">
+<div class="home">
 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/global.css">
+  <h1 class="page-heading">Posts</h1>
 
-    <title>Ridiculously Open Online Self Training Sites</title>
-  </head>
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <body>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <!--a id="forkme_banner" href="https://github.com/roosts">View on GitHub</a-->
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-          <h1 id="project_title">R.O.O.S.T.S.</h1>
-          <h2 id="project_tagline">Ridiculously Open Online Self Training Sites</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h3>Welcome to the website!</h3>
-	<p>I'm just getting started creating the site on GitHub. So, bear with me while I get things in place.</p>
-	<p>It looks like I will be converting this to use Jekyll. I'll need a bit of time to figure out how all of that all works.</p>
-	<p>By the way, you can find everything at https://github.com/roosts/roosts.github.io</p>
-	<p>I'm now in the process of cleaning stuff out of this directory in preparation to start using jekyll.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Here is a (not-quite) empty footer :-)</p>
-      </footer>
-    </div>
-
-    
-
-  </body>
-</html>
+</div>
