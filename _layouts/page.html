@@ -7,8 +7,29 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
-  <article class="post-content">
-    {{ content }}
-  </article>
+  {% if page.sidebar %}
+
+    <article class="post-content with-sidebar">
+      {{ content }}
+    </article>
+
+    <div class="sidebar">
+      <ul>
+        <li><a class="page-link block-title" href="{{ page.parent | prepend: site.baseurl }}">{{ page.parent_title }}</a></li>
+      {% for item in site.secondary %}
+        {% if item.parent == page.parent %}
+        <li><a class="page-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+
+  {% else %}
+
+    <article class="post-content without-sidebar">
+      {{ content }}
+    </article>
+
+  {% endif %}
 
 </div>

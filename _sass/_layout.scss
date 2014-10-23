@@ -232,3 +232,20 @@
         }
     }
 }
+
+/**
+ * Articles
+ */
+
+article.with-sidebar {
+  float: left;
+  width: 60%;
+}
+
+/**
+ * Sidebars
+ */
+div.sidebar {
+  float: right;
+  width: 30%;
+}

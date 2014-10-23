@@ -15,7 +15,7 @@
 
       <div class="trigger">
         <ul>
-          <li><a href="/">Home</a></li>
+          <li><a class="page-link" href="/">Home</a></li>
         {% for page in site.primary %}
           {% if page.title %}
           <li><a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>

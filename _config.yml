@@ -19,3 +19,5 @@ kramdown:
 collections:
   primary:
     output: true
+  secondary:
+    output : true
