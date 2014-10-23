@@ -1,14 +1,12 @@
 # Site settings
 name: R.O.O.S.T.S.
 title: Ridiculously Open Online Self Training Sites
-email: marc [at] [no-spam.]roosts.org
+email: marc [at] no-spam.roosts.org
 description: > # this means to ignore newlines until "baseurl:"
-  I have no idea what description to put yet that says anything more
-  than what the title already says. I guess I have to come back to this
-  later.
+  This is the portal for all things R.O.O.S.T.S. It is proudly hosted on GitHub.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://www.roosts.org" # the base hostname & protocol for your site
-github_username:  vegantriathlete
+github_username:  roosts
 
 # Build settings
 markdown: kramdown
