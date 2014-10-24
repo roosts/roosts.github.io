@@ -39,6 +39,15 @@
         }
     }
 
+    ul {
+      margin: 0;
+    }
+
+    li {
+      display: inline-block;
+      padding: 15px;
+    }
+
     @include media-query($on-palm) {
         position: absolute;
         top: 9px;
