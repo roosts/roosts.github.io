@@ -249,6 +249,10 @@
 article.with-sidebar {
   float: left;
   width: 60%;
+  @include media-query($on-palm) {
+    float: none;
+    width: 100%;
+  }
 }
 
 /**
@@ -257,4 +261,8 @@ article.with-sidebar {
 div.sidebar {
   float: right;
   width: 30%;
+  @include media-query($on-palm) {
+    float: none;
+    width: 100%;
+  }
 }
